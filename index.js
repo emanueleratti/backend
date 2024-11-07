@@ -22,12 +22,9 @@ server.use("/uploads", express.static(path.join(__dirname, "./uploads")));
 
 // middleware
 server.use(express.json());
-server.use(
-  cors({
-    origin: ["https://epibooksfrontend.vercel.app/"],
-    methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
-  })
-);
+server.use(cors());
+// origin: ["https://epibooksfrontend.vercel.app/"],
+// methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
 
 server.use(badRequestHandler);
 server.use(genericErrorHandler);
