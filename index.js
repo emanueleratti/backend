@@ -24,9 +24,8 @@ server.use("/uploads", express.static(path.join(__dirname, "./uploads")));
 server.use(express.json());
 server.use(
   cors({
-    origin: ["https//www.miosito.it"],
-    methods: ["GET", "PATCH"],
-    allowedHeaders: ["Content-Type", "isAuth"],
+    origin: ["https://epibooksfrontend.vercel.app/"],
+    methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
   })
 );
 
